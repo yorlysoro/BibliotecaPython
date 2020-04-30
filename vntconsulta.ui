@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>vtnConsulta</class>
+ <widget class="QMainWindow" name="vtnConsulta">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>745</width>
+    <height>468</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Solicitud</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton:hover{
+	background-color: QLinearGradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2198c0, stop: 1 yellow);
+}
+
+QPushButton:pressed{
+	background-color: QLinearGradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2198c0, stop: 1 green);
+}
+QComboBox{
+	subcontrol-origin: padding;
+    subcontrol-position: top right;
+    selection-background-color: #86E094;
+    selection-color: yellow;;
+  	border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+	border-color: #D0C293;
+	color: black;
+	font: bold 12px
+}
+QComboBox:hover{
+	border: 1px solid  #D0C293;
+	color: yellow;
+}
+QComboBox::drop-down
+{
+     subcontrol-origin: padding;
+     subcontrol-position: top right;
+     width: 15px;
+     color: white;
+     border-left-width: 0px;
+     border-left-color: darkgray;
+     border-left-style: solid; /* just a single line */
+     border-top-right-radius: 3px; /* same radius as the QComboBox */
+     border-bottom-right-radius: 3px;
+     padding-left: 10px;
+ }
+
+QHeaderView::section {
+    background-color: QLinearGradient(x1: 5, y1: 0, x2: 0, y2: 1, stop: 0 #2198c0, stop: 1 #F1EEE1);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+	border-color: #D0C293;
+	font: bold 14px;
+	padding: 6px;
+}
+
+QTableWidget {
+	background-color:  QLinearGradient(x1: 5, y1: 0, x2: 0, y2: 3, stop: 0 #2198c0, stop: 1 #F1EEE1);
+    gridline-color: #E4EE9A;
+     border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+	border-color: #D0C293;
+	font: bold 14px;
+	min-width: 10em;
+    padding: 6px;
+}
+
+QTableWidget QTableCornerButton::section {
+    background-color: white;
+     border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+	border-color: #D0C293;
+	padding: 6px;
+}
+
+QMainWindow{
+	 background-color:  QLinearGradient(x1: 5, y1: 0, x2: 0, y2: 3, stop: 0 #2198c0, stop: 1 #F1EEE1);
+}
+QPushButton {
+            margin: 4px;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+	border-color: #D0C293;
+	font: bold 14px;
+	min-width: 10em;
+    padding: 6px;
+            background-color: QLinearGradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2198c0, stop: 1 #A3E6EE);
+ }</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QComboBox" name="comboSemestre">
+            <item>
+             <property name="text">
+              <string>Semestre 1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Semestre 3</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Semestre 5</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnBuscar">
+            <property name="text">
+             <string>Buscar</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tablaConsulta">
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnSolicitar">
+          <property name="text">
+           <string>Solicitar</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnSalir">
+          <property name="text">
+           <string>Salir</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnSalir</sender>
+   <signal>clicked()</signal>
+   <receiver>vtnConsulta</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>428</x>
+     <y>451</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>476</x>
+     <y>435</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
